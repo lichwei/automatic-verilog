@@ -1,9 +1,6 @@
-    always@(posedge clk or negedge rst_n)
-    begin
-        if(rst_n==1'b0)begin
+    always@(posedge clk or negedge rst_n) begin
+        if(!rst_n)
              
-        end
-        else begin
+        else 
              
-        end
     end

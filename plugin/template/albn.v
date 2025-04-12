@@ -1,5 +1,4 @@
-    always@(negedge clk)
-    begin
+    always@(negedge clk) begin
         if(rst==1'b1)begin
              
         end

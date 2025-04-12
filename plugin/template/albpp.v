@@ -1,5 +1,4 @@
-    always@(posedge clk or posedge rst)
-    begin
+    always@(posedge clk or posedge rst) begin
         if(rst==1'b1)begin
              
         end

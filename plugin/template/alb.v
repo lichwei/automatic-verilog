@@ -1,4 +1,3 @@
-    always@(*)
-    begin
+    always@(*) begin
          
     end

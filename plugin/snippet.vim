@@ -2,7 +2,7 @@
 " Vim Plugin for Verilog Code Automactic Generation 
 " Author:         HonkW
 " Website:        https://honk.wang
-" Last Modified:  2022/08/05 21:28
+" Last Modified:  2025/05/24 03:13
 " File:           snippet.vim
 " Note:           Snippet function partly from zhangguo's vimscript,partly from load_template
 "------------------------------------------------------------------------------
@@ -25,12 +25,11 @@ endfunction
 
 "Defaults 默认设置{{{1
 let g:_ATV_SNIPPET_DEFAULTS = {
-            \'author':      'HonkW',
-            \'company':     'NB Co.,Ltd.',
+            \'author':      'leecw',
             \'project':     'IC_Design',
             \'device':      'Xilinx',
-            \'email':       'contact@honk.wang',
-            \'website':     'honk.wang',
+            \'email':       'leecw_xyz@163.com',
+            \'website':     'https://github.com/lichwei/',
             \'albpp_file':  expand("<sfile>:p:h").'/template/albpp.v',
             \'albpp_pos':   '4,13',
             \'albpn_file':  expand("<sfile>:p:h").'/template/albpn.v',
@@ -134,11 +133,11 @@ function s:AddHeader() "{{{1
     call append(lnum+4,  "//         ")
     let lnum = lnum + 5
     let cursor_lnum = lnum
-    if g:atv_snippet_company != ''
-        call append(lnum,   "// Copyright (c) ".strftime("%Y ") . g:atv_snippet_company . ".")
-        call append(lnum+1, "// ALL RIGHTS RESERVED")
-        let lnum = lnum + 2
-    endif
+    "if g:atv_snippet_company != ''
+    "    call append(lnum,   "// Copyright (c) ".strftime("%Y ") . g:atv_snippet_company . ".")
+    "    call append(lnum+1, "// ALL RIGHTS RESERVED")
+    "    let lnum = lnum + 2
+    "endif
     call append(lnum,    "// ")
     call append(lnum+1,  "// ---------------------------------------------------------------------------------")
     call append(lnum+2,  "// Modification History:")
